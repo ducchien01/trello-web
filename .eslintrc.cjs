@@ -15,7 +15,6 @@ module.exports = {
     'react-hooks',
     'react-refresh'
   ],
-    
   rules: {
     // React
     'react-refresh/only-export-components': 'warn',
