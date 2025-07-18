@@ -33,7 +33,7 @@ function Profiles() {
           aria-expanded={open ? 'true' : undefined}
         >
           <Avatar
-            sx={{ width: 34, height: 34 }}
+            sx={{ width: 36, height: 36 }}
             alt="ducchien01"
             src="https://static-images.vnncdn.net/vps_images_publish/000001/000003/2025/7/16/w-z6810190764424-825b2cb5c4dac7665422d7e56581a184-253596.jpg?width=0&s=dEqpDnEgl4CCF6WelE2khw"
           />

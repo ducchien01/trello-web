@@ -12,13 +12,13 @@ import Button from '@mui/material/Button'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 
 const MENU_STYLE = {
-  color: 'primary.main',
-  bgcolor: 'white',
+  color: 'white',
+  bgcolor: 'transparent',
   border: 'none',
   paddingX: '5px',
   borderRadius: '4px',
   '& .MuiSvgIcon-root': {
-    color: 'primary.main'
+    color: 'white'
   },
   '&:hover': {
     bgcolor: 'primary.50'
@@ -28,7 +28,6 @@ const MENU_STYLE = {
 function BoardBar() {
   return (
     <Box px={2} sx={{
-
       width: ' 100%',
       height: (theme) => theme.trello.boardBarHeight,
       display: 'flex',
@@ -36,7 +35,8 @@ function BoardBar() {
       justifyContent: 'space-between',
       gap: 1,
       overflowX: 'auto',
-      borderTop: '1px solid #00bfa5'
+      borderBottom: '1px solid white',
+      bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#1976b2')
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <Chip
@@ -73,14 +73,26 @@ function BoardBar() {
       </Box>
 
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <Button variant="outlined" startIcon={<PersonAddIcon />}>Invite</Button>
+        <Button
+          variant="outlined"
+          startIcon={<PersonAddIcon />}
+          sx={{
+            color: 'white',
+            borderColor: 'white',
+            '&:hover': { borderColor: 'white' }
+          }}
+        >
+          Invite
+        </Button>
         <AvatarGroup
           max={3}
           sx={{
+            gap: '10px',
             '& .MuiAvatar-root': {
               width: 34,
               height: 34,
-              fontSize: 16
+              fontSize: 16,
+              border: 'none'
             }
           }}
         >
