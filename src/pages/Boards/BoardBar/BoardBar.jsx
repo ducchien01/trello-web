@@ -101,16 +101,16 @@ function BoardBar({ board }) {
           }}
         >
           <Tooltip title="ducchien">
-            <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+            <Avatar alt="Trevor Henderson" src="" />
           </Tooltip>
           <Tooltip title="ducchien">
-            <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+            <Avatar alt="Trevor Henderson" src="" />
           </Tooltip>
           <Tooltip title="ducchien">
-            <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+            <Avatar alt="Trevor Henderson" src="" />
           </Tooltip>
           <Tooltip title="ducchien">
-            <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+            <Avatar alt="Trevor Henderson" src="" />
           </Tooltip>
         </AvatarGroup>
       </Box>
