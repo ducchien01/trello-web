@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box'
 import ListColumns from './ListColumns/ListColumns'
 
-function BoardContent() {
+function BoardContent({ board }) {
   return (
     <Box sx={{
       height: (theme) => theme.trello.boardContentHeight,
@@ -9,7 +9,7 @@ function BoardContent() {
       width: '100%',
       p: '10px 0'
     }}>
-      <ListColumns />
+      <ListColumns columns={board.columns}/>
     </Box>
   )
 }
