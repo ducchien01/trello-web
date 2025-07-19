@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card/Card'
 import Box from '@mui/material/Box'
 
-function ListCard() {
+function ListCard({ cards }) {
   return (
     <Box sx={{
       p: '0 5px',
@@ -29,7 +29,7 @@ function ListCard() {
         backgroundColor: '#bfc2cf',
       }
     }}>
-      <Card />
+      {cards.map((card) => <Card key={card._id} card={card} />)}
     </Box>
   )
 }

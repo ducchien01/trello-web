@@ -21,7 +21,7 @@ import ListCard from './ListCards/ListCards'
 const COLUMN_HEADER_HEIGHT = '50px'
 const COLUMN_FOOTER_HEIGHT = '56px'
 
-function Column() {
+function Column({ column }) {
   const [anchorEl, setAnchorEl] = useState(null)
   const open = Boolean(anchorEl)
 
@@ -59,7 +59,7 @@ function Column() {
             cursor: 'pointer'
           }}
         >
-          Comlumn Title
+          {column?.title}
         </Typography>
         <Box>
           <Tooltip title="More option">
@@ -111,12 +111,12 @@ function Column() {
       </Box>
 
       {/* List Card */}
-      <ListCard />
+      <ListCard cards={column?.cards} />
 
       {/* Box Footer */}
       <Box
         sx={{
-          height:  (theme) => theme.trello.columnFooterHeight,
+          height: (theme) => theme.trello.columnFooterHeight,
           p: 2,
           display: 'flex',
           alignItems: 'center',
